@@ -1,0 +1,276 @@
+<html>
+
+	<head>
+
+		<title>Portfolio</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Barrio|Lato" rel="stylesheet">
+
+		<script>
+
+			function createPortfolio() {
+			    var modal3 = document.getElementById('m3');
+			        modal3.style.display = 'none';
+			}
+
+			function addVenus() {
+			    var venus = document.getElementById('add1');
+			        venus.style.display = 'none';
+			}
+
+			function addPrimavera() {
+			    var primavera = document.getElementById('add2');
+			        primavera.style.display = 'none';
+			}
+
+			function addMagi() {
+			    var magi = document.getElementById('add3');
+			        magi.style.display = 'none';
+			}
+
+			function submitPortfolio() {
+			    var modal2 = document.getElementById('m2');
+			        modal2.style.display = 'none';
+			    document.getElementById('display-artist').innerHTML = document.getElementById("artist").value;
+			    document.getElementById('display-caption1').innerHTML = document.getElementById("caption1").value;
+			    document.getElementById('display-caption2').innerHTML = document.getElementById("caption2").value;
+			    document.getElementById('display-caption3').innerHTML = document.getElementById("caption3").value;
+			    document.getElementById('display-textarea1').innerHTML = document.getElementById("textarea1").value.replace(/\n/g, "<br>");
+			    document.getElementById('display-textarea2').innerHTML = document.getElementById("textarea2").value.replace(/\n/g, "<br>");
+			    document.getElementById('display-textarea3').innerHTML = document.getElementById("textarea3").value.replace(/\n/g, "<br>");
+			}
+
+			function saveFeedback() {
+				var comment = document.getElementById('comment');
+			        comment.style.display = 'block';
+			    document.getElementById('comment-text').innerHTML = document.getElementById("textarea4").value.replace(/\n/g, "<br>");
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="parent">
+
+			<div id="sidebar">
+
+				<div id="logo">
+					ArtHist.
+				</div>
+				<div class="sidebar-item">
+					<!--<img src="account.png" class="sidebar-icon" />-->
+					<a class="sidebar-text">Account</a>
+				</div>
+				<div class="sidebar-item">
+					<!--<img src="course.png" class="sidebar-icon" />-->
+					<a class="sidebar-text">Course</a>
+				</div>
+				<div class="sidebar-item">
+					<!--<img src="modules.png" class="sidebar-icon" />-->
+					<a class="sidebar-text">Modules</a>
+				</div>
+				<div class="sidebar-item" style="background-color:#fcfcfc;color:#464b51;">
+					<!--<img src="assignments.png" class="sidebar-icon" />-->
+					<a class="sidebar-text ass">Assignments</a>
+				</div>
+				<div class="sidebar-item">
+					<!--<img src="group.png" class="sidebar-icon" />-->
+					<a class="sidebar-text">Group</a>
+				</div>
+
+			</div>
+
+			<div class="content">
+
+				<h1>Portfolio</h1>
+
+				<div class="modal">
+
+					<div id="m1">
+
+						<div class="portfolio-content">
+
+							<h2 id="display-artist"></h2>
+							<h3>By Abigail Permadhi</h3>
+
+							<br><br>
+
+							<div id="venus-portfolio">
+								<img src="birth-of-venus.jpg" width="100%">
+							</div>
+							<span id="display-caption1"></span>
+							<br><br>
+							<span id="display-textarea1"></span>
+
+							<br><br><br>
+
+							<div id="primavera-portfolio">
+								<img src="la-primavera.jpg" width="100%">
+							</div>
+							<span id="display-caption2"></span>
+							<br><br>
+							<span id="display-textarea2"></span>
+
+							<br><br><br>
+
+							<div id="magi-portfolio">
+								<img src="adoration-of-the-magi.jpg" width="100%">
+							</div>
+							<span id="display-caption3"></span>
+							<br><br>
+							<span id="display-textarea3"></span>
+
+						</div>
+
+						<div class="feedback">
+
+							<h2>Feedback</h2>
+
+							<br>
+
+							<textarea id="textarea4" rows="4" cols="20" class="textarea4" placeholder="Give feedback..."
+							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Give feedback...'">Great portfolio! Very thorough analysis, though I have a few suggestions...
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+
+							<br>
+
+							<button onclick="saveFeedback();" class="button bs">Save</button>
+
+							<div id="comment">
+								<b>Abigail Permadhi says:</b><br>
+								<span id="comment-text"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div id="m2">
+
+						<div class="portfolio-desc pd">Your task is to create a portfolio that explores the career of a chosen Renaissance artist. The aim of this project is to allow you to further analyse and thus familiarise yourself with the works of your chosen artist.
+
+						<br><br>
+
+						<span class="step"><b>Step 1:</b> Choose a Renaissance artist:<span>
+
+						<input type="text" name="message" id="artist" placeholder="Chosen Renaissance artist here..."
+						onfocus="this.placeholder = ''" onblur="this.placeholder = 'Chosen Renaissance artist here...'" value="Sandro Botticelli">
+
+						</div>
+
+						<div class="images">
+
+							<span class="step s2"><b>Step 2:</b> Pick three paintings by your chosen artist:<span>
+								<br><br>
+
+							<div id="venus">
+								<img src="birth-of-venus.jpg" width="100%">
+							</div>
+							<div id="add1">
+								<button onclick="addVenus();" class="button add-photo"><b>&#43;</b> Add Photo</button>
+							</div>
+
+							<div id="primavera">
+								<img src="la-primavera.jpg" width="100%">
+							</div>
+							<div id="add2">
+								<button onclick="addPrimavera();" class="button add-photo"><b>&#43;</b> Add Photo</button>
+							</div>
+
+							<div id="magi">
+								<img src="adoration-of-the-magi.jpg" width="100%">
+							</div>
+							<div id="add3">
+								<button onclick="addMagi();" class="button add-photo"><b>&#43;</b> Add Photo</button>
+							</div>
+
+						</div>
+
+						<div class="text">
+
+							<span class="step s3"><b>Step 3:</b> Use analysis to illustrate different phases in your chosen artist:<span>
+								<br><br>
+
+							<input type="text" name="message" id="caption1" placeholder="Title of artwork and date created here..."
+							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title of artwork and date created here...'" value="The Birth of Venus - Mid 1480s">
+
+							<textarea id="textarea1" rows="16" cols="50" class="textarea1" placeholder="Your analysis here (200 - 300 words)..."
+							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your analysis here (200 - 300 words)...'">The Birth of Venus (Italian: Nascita di Venere [ˈnaʃʃita di ˈvɛːnere]) is a painting by Sandro Botticelli generally thought to have been made in the mid 1480s. It depicts the goddess Venus, having emerged from the sea fully-grown (called Venus Anadyomene and often depicted in art), arriving at the shore. The painting is in the Uffizi Gallery in Florence, Italy. Although the two are not a pair, the painting is inevitably discussed with Botticelli's other very large mythological painting, the Primavera, also in the Uffizi. They are among the most famous paintings in the world, and icons of the Italian Renaissance; of the two, the Birth is even better known than the Primavera.[1] 
+
+As depictions of subjects from classical mythology on a very large scale they were virtually unprecedented in Western art since classical antiquity. It used to be thought that they were both commissioned by the same member of the Medici family, but this is now uncertain. They have been endlessly analysed by art historians, with the main themes being: the emulation of ancient painters and the context of wedding celebrations (generally agreed), the influence of Renaissance Neo-Platonism (somewhat controversial), and the identity of the commissioners (not agreed). 
+
+Most art historians agree, however, that the Birth does not require complex analysis to decode its meaning, in the way that the Primavera probably does. While there are subtleties in the painting, its main meaning is a straightforward, if individual, treatment of a traditional scene from Greek mythology, and its appeal is sensory and very accessible, hence its enormous popularity.[2]</textarea>
+
+							<input type="text" name="message" id="caption2" class="ta" placeholder="Title of artwork and date created here..."
+							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title of artwork and date created here...'" value="Primavera - Late 1470s">
+
+							<textarea id="textarea2" rows="16" cols="50" class="textarea2" placeholder="Your analysis here (200 - 300 words)..."
+							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your analysis here (200 - 300 words)...'">Primavera (Italian pronunciation: [primaˈveːra]), also known as Allegory of Spring, is a tempera panel painting by Italian Renaissance artist Sandro Botticelli painted in the late 1470s or early 1480s (datings vary). It has been described as "one of the most written about, and most controversial paintings in the world",[1] and also "one of the most popular paintings in Western art".[2] 
+
+Most critics agree that the painting, depicting a group of mythological figures in a garden, is an allegory based on the lush growth of Spring, but accounts of any precise meaning vary, though many involve the Neoplatonism which then fascinated intellectual circles in Florence. The title of La Primavera was first recorded by the art historian Giorgio Vasari who saw it at Villa Castello, just outside Florence, in 1550.[3] 
+
+The history of the painting is not certainly known, though it seems to have been commissioned by one of the Medici family. It contains references to the Roman poets Ovid and Lucretius, and may also allude to a poem by Poliziano. Since 1919 the painting has been part of the collection of the Uffizi Gallery in Florence, Italy.</textarea>
+
+							<input type="text" name="message" id="caption3" class="ta" placeholder="Title of artwork and date created here..."
+							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title of artwork and date created here...'" value="Adoration of the Magi - 1475">
+
+							<textarea id="textarea3" rows="16" cols="50" class="textarea3" placeholder="Your analysis here (200 - 300 words)..."
+							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your analysis here (200 - 300 words)...'">In the scene numerous characters are present, among which are several members of the Medici family: Cosimo de' Medici (the Magus kneeling in front of the Virgin, described by Vasari as "the finest of all that are now extant for its life and vigour"), his sons Piero (the second Magus kneeling in the centre with the red mantle) and Giovanni (the third Magus), and his grandsons Giuliano and Lorenzo. 
+
+The three Medici portrayed as Magi were all dead at the time the picture was painted, and Florence was effectively ruled by Lorenzo. Whether Botticelli's intimate relations with the Medici brothers allowed the wealthy Gaspare to introduce the portraits of their kinsmen in his altar-piece, or Gaspare was glad for this opportunity to pay a graceful compliment to these powerful personages is hard to tell. It is, however, apparent from the great pains in which Botticelli bestowed on these figures, that this formed an important part of the task. 
+
+Also Gaspare himself is said to be included in the painting, as the old man on the right with white hair and an alight blue robe looking and pointing at the observer. Furthermore, also Botticelli is alleged to have made a self-portrait as the blonde man with yellow mantle on the far right.</textarea>
+						</div>
+
+						<div class="button-holder bh">
+							<button onclick="submitPortfolio();" class="button">Submit Portfolio</button>
+						</div>
+
+					</div>
+
+					<div id="m3">
+
+						<p>
+
+						<span class="portfolio-desc">Your task is to create a portfolio that explores the career of a chosen Renaissance artist. The aim of this project is to allow you to further analyse and thus familiarise yourself with the works of your chosen artist.</span>
+
+						<br>
+						<br>
+						<br>
+
+						<ul>
+						<li><b>Step 1:</b> Choose a famous Renaissance artist.</li>
+						<br>
+						<li><b>Step 2:</b> Pick three paintings from different phases of your chosen artists' life by your chosen artist.</li>
+						<br>
+						<li><b>Step 3:</b> Create a portfolio that illustrates different phases in the career of your chosen artist, place each painting 
+						in the context of your artist’s personal situation and major artistic movements of the time.</li>
+						<br>
+						<li><b>Step 4:</b> Once completed, you may recieve feedback on your work. You may also place feedback on the work of other members of your peer group.</li>
+						</ul>
+
+						<br>
+						<br>
+						<br>
+
+						</p>
+
+						<div class="button-holder">
+							<button onclick="createPortfolio();" class="button">Create Portfolio</button>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
